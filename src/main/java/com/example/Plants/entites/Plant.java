@@ -7,7 +7,8 @@ import jakarta.persistence.*;
 public class Plant {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Integer id;
 
     @Column(name = "NAME")

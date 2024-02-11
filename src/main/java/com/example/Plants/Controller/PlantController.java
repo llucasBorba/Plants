@@ -50,7 +50,7 @@ public class PlantController {
 
     }
     @DeleteMapping("/plants/{id}")
-    public Plant deletePLant(@PathVariable("id") Integer id){
+    public Plant deletePlant(@PathVariable("id") Integer id){
         Optional<Plant> optionalPlant = plantRepository.findById(id);
         if(optionalPlant.isEmpty()){return null;}
 
